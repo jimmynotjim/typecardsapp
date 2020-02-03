@@ -1,0 +1,334 @@
+// Landing Page Styles
+// --------------------------------------------------
+
+body {
+	background-color: $grayLighter;
+	text-rendering:optimizeLegibility;
+
+	&.app {
+		background-color: #000;
+	}
+}
+
+.logo {
+	@include rem(margin, 40px auto 60px);
+	@include rem(width, 300px);
+}
+
+.details {
+	margin: 0 auto;
+	width: 80%;
+
+	p {
+		@include rem(margin-bottom, 40px);
+	}
+}
+
+.logo-type {
+ 	-moz-font-feature-settings:"liga=1, dlig=1";
+    -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */
+    -ms-font-feature-settings:"liga", "dlig";
+    -o-font-feature-settings:"liga", "dlig";
+    -webkit-font-feature-settings:"liga", "dlig";
+    font-feature-settings:"liga", "dlig";
+
+	@include serif;
+	@include rem(font-size, 72px);
+
+	line-height: 1.125em;
+	text-align: center;
+	width: 100%;
+}
+
+.tag-line {
+	@include rem(font-size, 14px);
+
+	float: right;
+	font-weight: 400;
+	line-height: 1.125em;
+	position: relative;
+	right: 5px;
+	text-align: right;
+	top: -0.8em;
+	width: 70%;
+}
+
+.phone {
+	@include rem(margin, 0 auto);
+
+	background-color: $black;
+	max-width: 382px;
+	position: relative;
+	width: 100%;
+
+	.main-app {
+		height: 380px;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 320px;
+	}
+
+	.beta-logo {
+		@include rem(font-size, 65px);
+	}
+
+	.card-nav {
+		top: 50%;
+		margin: 11px 0 0;
+
+		#prev {
+			left: 2px;
+			top: -30px;
+		}
+
+		#next {
+			right: 2px;
+			top: -30px;
+		}
+	}
+}
+
+.try {
+	@include hand;
+	@include rem(font-size, 24px);
+	@include rem(margin, 20px auto 30px);
+
+	display: block;
+	font-weight: 800;
+	left: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.button {
+	@include border-radius(4px);
+	@include rem(height, 40px);
+	@include rem(padding, 6px);
+	@include rem(width, 200px);
+
+	//webkit default reset
+	-webkit-appearance: none;
+	border: 1px solid $red;
+
+	background-color: $red;
+	color: $white;
+	display: block;
+	font-weight: 500;
+	margin: 0 auto;
+	text-align: center;
+
+	&:hover {
+		@include box-shadow(0 1px 2px $gray);
+		@include gradient-vertical(tint($red, 20%), $red);
+
+		background-color: $red;
+		border: 1px solid shade($red, 15%);
+		color: #fff;
+	}
+}
+
+.touch .button {
+	@include box-shadow(0 1px 2px $gray);
+	@include gradient-vertical(tint($red, 20%), $red);
+
+	background-color: $red;
+	border: 1px solid shade($red, 15%);
+}
+
+.signup {
+	@include rem(margin, 40px auto 80px);
+
+	width: 100%;
+
+	.twitter {
+		margin-top: 12px;
+
+		a {
+			font-weight: 500;
+		}
+	}
+}
+#mc_embed_signup {
+
+	input {
+		@include sansSerif;
+		@include rem(font-size, 20px);
+	}
+	::-webkit-input-placeholder {
+		color: $grayLight;
+	}
+	input:-moz-placeholder {
+		color: $grayLight;
+	}
+
+	p {
+		@include rem(font-size, 20px);
+		@include rem(margin-bottom, 12px);
+
+		line-height: 1.125;
+		text-align: center;
+	}
+	.email {
+		@include border-radius(4px);
+		@include rem(height, 40px);
+		@include rem(margin, 0 auto 12px);
+		@include rem(padding, 6px);
+		@include rem(width, 280px);
+
+		//webkit default reset
+		border: 1px solid $grayLight;
+		-webkit-appearance: none;
+
+		display: block;
+		outline-color: $red;
+	}
+}
+
+.main-footer span {
+	@include rem(font-size, 18px);
+
+	color: $gray;
+	display: block;
+	margin: 0 auto 40px;
+	max-width: 530px;
+	padding: 0 20px;
+	width: 100%;
+
+	a {
+		font-weight: 500;
+	}
+}
+.boston {
+	display: block;
+	margin: 40px auto;
+	width: 63px;
+}
+
+@media screen and (min-width: 420px) {
+
+.phone {
+	background: url('../img/iphone-black.png') no-repeat center center;
+	height: 840px;
+
+	#slider {
+		background: $black url('../img/bar.png') no-repeat top center;
+		height: 482px;
+		padding-top: 22px;
+		top: 131px;
+	}
+
+	.main-app {
+		height: 480px;
+		top: 130px;
+	}
+}
+
+}
+
+@media screen and (min-width: 820px) {
+
+#main {
+	@include clearFix;
+}
+.info {
+	float: left;
+	width: 45%;
+}
+
+.logo {
+	@include rem(margin-top, 140px);
+}
+
+.phone {
+	@include rem(margin, 40px 0);
+
+	float: right;
+	margin-right: 5%;
+}
+
+.signup {
+	clear: both;
+	width: 50%;
+}
+
+.main-footer {
+	clear: both;
+}
+
+}
+
+@media screen and (min-width: 920px) {
+
+.info {
+	margin-left: 5%;
+}
+
+.logo,
+.details {
+	@include rem(width, 376px);
+}
+.logo-type {
+	@include rem(font-size, 92px);
+}
+.tag-line {
+	@include rem(font-size, 17px);
+}
+.signup {
+	@include rem(width, 360px);
+}
+
+.main-footer span {
+	float: left;
+}
+.boston {
+	float: right;
+	margin-top: 0;
+	margin-right: 5%;
+}
+
+}
+
+@media screen and (min-width: 1020px) {
+
+.logo,
+.details {
+	@include rem(width, 460px);
+}
+.logo-type {
+	@include rem(font-size, 112px);
+
+}
+
+.tag-line {
+	@include rem(font-size, 21px);
+}
+
+.signup {
+	@include rem(width, 450px);
+}
+
+}
+
+@media screen and (min-width: 1130px) {
+
+#main {
+	max-width: 1165px;
+	margin: 0 auto;
+}
+
+.logo,
+.details {
+	@include rem(width, 552px);
+}
+.logo-type {
+	@include rem(font-size, 136px);
+}
+.tag-line {
+	@include rem(font-size, 25px);
+}
+.signup {
+	@include rem(width, 530px);
+}
+
+}

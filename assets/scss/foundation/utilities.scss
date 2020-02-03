@@ -1,0 +1,26 @@
+// UTILITY CLASSES
+// ---------------
+
+// Quick floats
+@mixin pull-right {
+  float: right;
+}
+@mixin pull-left {
+  float: left;
+}
+
+// Toggling content
+@mixin hide {
+  display: none;
+}
+@mixin show {
+  display: block;
+}
+
+// Visibility
+@mixin invisible {
+  visibility: hidden;
+}
+@mixin visible {
+	
+}

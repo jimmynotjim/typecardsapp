@@ -1,0 +1,21 @@
+/*!
+ * Foundational Elements for SCSS Processing
+ * Based on Bootstrap v2.0.1
+ *
+ * Developed strictly for Type Cards App
+ * Built by James Wilson aka @jimmynotjim
+ *
+ */
+
+// CSS Reset
+@import "reset.scss";
+
+// Core variables and mixins
+@import "variables.scss"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.scss";
+
+// Base CSS
+@import "type.scss";
+
+// Utility classes
+@import "utilities.scss"; // Has to be last to override when necessary

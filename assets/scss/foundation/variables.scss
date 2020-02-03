@@ -1,0 +1,92 @@
+// Variables.scss
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+//Baseline
+$baseLine: 20px;
+
+// Grays
+$black:                 #1a1a1a;
+$grayDark:              #4d4d4d;
+$gray:                  #808080;
+$grayLight:             #cccccc;
+$grayLighter:           #eeeeee;
+$white:					#fff;
+
+// Accent colors
+$red:					#db0901;
+
+
+// Typography
+$baseFontSize:          $baseLine;
+$baseFontFamily:        'AvenirNext-Regular', 'brandon-grotesque', 'Futura', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$baseLineHeight:        1.4em;
+$textColor:             $black;
+$headingFontFamily:		'AvenirNext-DemiBold', 'brandon-grotesque', 'Futura', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$linkFontFamily:		'AvenirNext-Medium', 'brandon-grotesque', 'Futura', 'Segoe UI', 'Helvetia Neue', Arial, sans-serif;
+
+// Links
+$linkColor:             $red;
+$linkColorHover:        $grayDark;
+
+// Buttons
+$primaryButtonBackground:    $red;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000;
+$zindexPopover:           1010;
+$zindexTooltip:           1020;
+$zindexFixedNavbar:       1030;
+$zindexModalBackdrop:     1040;
+$zindexModal:             1050;
+
+
+// Input placeholder text color
+$placeholderText:         $grayLight;
+
+// Hr border color
+$hrBorder:                $grayLighter;
+
+// Form states and alerts
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken(adjust-hue($warningBackground, -10deg), 3%);
+
+$errorText:               #b94a48;
+$errorBackground:         #f2dede;
+$errorBorder:             darken(adjust-hue($errorBackground, -10deg), 3%);
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken(adjust-hue($successBackground, -10deg), 5%);
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken(adjust-hue($infoBackground, -10deg), 7%);
+
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+$gridColumns:             12;
+$gridColumnWidth:         60px;
+$gridGutterWidth:         20px;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// Fluid grid
+$fluidGridColumnWidth:    6.382978723%;
+$fluidGridGutterWidth:    2.127659574%;
